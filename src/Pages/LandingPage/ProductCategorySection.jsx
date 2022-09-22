@@ -50,7 +50,7 @@ const ProductCategorySection = () => {
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 766,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 2,

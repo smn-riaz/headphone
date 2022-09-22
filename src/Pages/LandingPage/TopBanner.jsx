@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import BuyNowBtn from "../../Components/BuyNowBtn";
 
 const TopBanner = () => {
   const [color, setColor] = useState("White");
@@ -179,7 +180,7 @@ const TopBanner = () => {
           <div className="basis-1/5 space-y-6 py-10 m-auto">
             
                   <div className="bg-black rounded-full h-8 w-8">
-                    <button
+                    <button title="Black"
                       onClick={() => colorHandler("Black")}
                       className="text-slate-500 w-full h-full"
                     >
@@ -187,7 +188,7 @@ const TopBanner = () => {
                     </button>
                   </div>
                   <div className="bg-white rounded-full h-8 w-8">
-                    <button
+                    <button title="White"
                       onClick={() => colorHandler("White")}
                       className="text-slate-500 w-full h-full"
                     >
@@ -195,7 +196,7 @@ const TopBanner = () => {
                     </button>
                   </div>
                   <div className="bg-blue-700 rounded-full h-8 w-8">
-                    <button
+                    <button title="Blue"
                       onClick={() => colorHandler("Blue")}
                       className="text-slate-500 w-full h-full"
                     >
@@ -203,7 +204,7 @@ const TopBanner = () => {
                     </button>
                   </div>
                   <div className="bg-red-600 rounded-full h-8 w-8">
-                    <button
+                    <button title="Red"
                       onClick={() => colorHandler("Red")}
                       className="text-slate-500 w-full h-full"
                     >
@@ -211,7 +212,7 @@ const TopBanner = () => {
                     </button>
                   </div>
                   <div className="bg-gray-700 rounded-full h-8 w-8">
-                    <button
+                    <button title="Gray"
                       onClick={() => colorHandler("Gray")}
                       className="text-slate-500 w-full h-full"
                     >
@@ -244,7 +245,7 @@ const TopBanner = () => {
             quisquam vel dolor perspiciatis similique. Maxime excepturi
             doloremque aliquam sunt aliquid! 
           </p>
-          <button className="hover:bg-gray-200 px-6 font-semibold hover:text-slate-800 bg-slate-600 text-white border-2 border-slate-200 shadow-white drop-shadow-md py-2">BUY NOW</button>
+          <BuyNowBtn />
         </div>
       </section>
     </main>
