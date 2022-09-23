@@ -1,4 +1,5 @@
 import React from "react";
+import ChoiceCard from "../../Components/ChoiceCard";
 import AboutUs from "./AboutUs";
 import BestSellingSection from "./BestSellingSection";
 import FindChoice from "./FindChoice";
@@ -20,7 +21,7 @@ const LandingPage = () => {
       <section className="bg-gray-500">
         <BestSellingSection />
       </section>
-      <section className="bg-gradient-to-r from-slate-500 to-slate-700 py-4">
+      <section className=" py-4">
         <FindChoice />
       </section>
     </main>
