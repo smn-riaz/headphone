@@ -72,7 +72,7 @@ const ProductCategorySection = () => {
         <div className="p-12">
           <Slider {...settings}>
             {productCatgory.map((prd) => (
-              <div className="space-y-3 h-2/3 p-16">
+              <div className="space-y-3 h-2/3 sm:p-12">
                 <div className="h-2/3">
                   <img src={prd.image} alt="" />
                 </div>
