@@ -1,5 +1,4 @@
 import React from "react";
-import ChoiceCard from "../../Components/ChoiceCard";
 import AboutUs from "./AboutUs";
 import BestSellingSection from "./BestSellingSection";
 import FeaturesSection from "./FeaturesSection";

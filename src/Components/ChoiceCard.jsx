@@ -1,23 +1,18 @@
 import React from "react";
-import best from "../Assets/best1.png";
-import choice1 from "../Assets/choice1.png";
-import choice2 from "../Assets/choice2.png";
-import choice3 from "../Assets/choice3.png";
-import BuyNowBtn from "./BuyNowBtn";
 
 const ChoiceCard = () => {
   const choices = [
     {
       name: "Choice 1",
-      image: choice1,
+      image: "https://i.ibb.co/LQms9sV/choice1.png",
     },
     {
       name: "Choice 2",
-      image: choice2,
+      image: "https://i.ibb.co/N2TM1NP/choice2.png",
     },
     {
       name: "Choice 3",
-      image: choice3,
+      image: "https://i.ibb.co/CVX7qNv/choice3.png",
     },
   ];
   return (

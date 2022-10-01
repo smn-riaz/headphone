@@ -1,6 +1,5 @@
 import React from "react";
 
-import people from "../../Assets/people.jpg";
 import ChoiceCard from "../../Components/ChoiceCard";
 
 const FindChoice = () => {
@@ -10,7 +9,7 @@ const FindChoice = () => {
       <section className="md:flex flex-row md:relative space-y-20">
         <div className="basis-1/3 h-2/3">
           <div className="">
-            <img src={people} alt="" />
+            <img src="https://i.ibb.co/RhBBWF1/people.jpg" alt="" />
           </div>
         </div>
 

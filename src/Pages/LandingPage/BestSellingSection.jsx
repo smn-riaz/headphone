@@ -1,20 +1,17 @@
 import React from "react";
-import best1 from "../../Assets/best1.png";
-import best2 from "../../Assets/best2.png";
-import best3 from "../../Assets/best3.png";
 
 const BestSellingSection = () => {
   const bestSelling = [
     {
-      image: best1,
+      image: "https://i.ibb.co/3pqK4fx/best1.png",
       name: "HeadPhone 1",
     },
     {
-      image: best2,
+      image: 'https://i.ibb.co/0tzbJ3C/best2.png',
       name: "HeadPhone 2",
     },
     {
-      image: best3,
+      image: "https://i.ibb.co/nbxQ2Y4/best3.png",
       name: "HeadPhone 3",
     },
   ];

@@ -1,7 +1,4 @@
 import React from 'react'
-import f1 from '../../Assets/f6.jpg'
-import f2 from '../../Assets/f7.jpg'
-import f8 from '../../Assets/f8.jpg'
 
 const FeaturesSection = () => {
   return (
@@ -18,7 +15,7 @@ const FeaturesSection = () => {
                 <p className='text-md  py-2 text-white'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quam eligendi minima voluptatibus earum, dolores perspiciatis nam veniam labore quae?</p>
             </div>
             <div className='basis-1/2'>
-              <img src={f2} alt="" />
+              <img src="https://i.ibb.co/gm0zghf/f7.jpg" alt="" />
             </div>
         </div>
       </section>  
@@ -27,7 +24,7 @@ const FeaturesSection = () => {
       <section>
         <div className='sm:flex flex-row justify-center align-middle bg-[#C3BABF]'>
             <div className='basis-1/2'>
-              <img src={f8} alt="" />
+              <img src="https://i.ibb.co/Z8KrJT4/f8.jpg" alt="" />
             </div>
             <div className='basis-1/2 p-8 my-auto space-y-8'>
                 <h5 className='uppercase text-gray-600 text-xl font-semibold'>
@@ -53,7 +50,7 @@ const FeaturesSection = () => {
                 <p className='text-md  py-2 text-white'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quam eligendi minima voluptatibus earum, dolores perspiciatis nam veniam labore quae?</p>
             </div>
             <div className='basis-1/2'>
-              <img src={f1} alt="" />
+              <img src="https://i.ibb.co/ry3d9Rm/f6.jpg" alt="" />
             </div>
         </div>
       </section> 

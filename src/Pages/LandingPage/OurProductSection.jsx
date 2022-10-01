@@ -1,61 +1,53 @@
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-import prd1 from "../../Assets/prd1.png";
-import prd2 from "../../Assets/prd2.png";
-import prd3 from "../../Assets/prd3.png";
-import prd4 from "../../Assets/prd4.png";
-import prd5 from "../../Assets/prd5.png";
-import prd6 from "../../Assets/prd6.png";
-import prd7 from "../../Assets/prd7.png";
-import prd8 from "../../Assets/prd9.png";
 
 const OurProductSection = () => {
   const gadgets = [
     {
-      image: prd1,
+      image: "https://i.ibb.co/cr9WzCS/prd1.png",
       price: 23,
       name: "Water Purifier",
       star: 5,
     },
     {
-      image: prd2,
+      image: 'https://i.ibb.co/dWYhsNK/prd2.png',
       price: 23,
       name: "Toaster",
       star: 5,
     },
     {
-      image: prd3,
+      image: "https://i.ibb.co/mDrjwBV/prd3.png",
       price: 23,
       name: "Coffee Maker",
       star: 3,
     },
     {
-      image: prd4,
+      image: "https://i.ibb.co/PjfkCF0/prd4.png",
       price: 23,
       name: "Cleaner",
       star: 4,
     },
     {
-      image: prd5,
+      image: "https://i.ibb.co/0cgW5Rz/prd5.png",
       price: 23,
       name: "Hair Dryer",
       star: 4,
     },
     {
-      image: prd6,
+      image: "https://i.ibb.co/C1gckGj/prd6.png",
       price: 23,
       name: "Washing Machine",
       star: 5,
     },
     {
-      image: prd7,
+      image: "https://i.ibb.co/NSPtX1v/prd7.png",
       price: 23,
       name: "Water Purifier",
       star: 4,
     },
     {
-      image: prd8,
+      image: "https://i.ibb.co/XFtwBx9/prd9.png",
       price: 23,
       name: "E-gadget",
       star: 5,
