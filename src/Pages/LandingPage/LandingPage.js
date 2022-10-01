@@ -2,6 +2,7 @@ import React from "react";
 import ChoiceCard from "../../Components/ChoiceCard";
 import AboutUs from "./AboutUs";
 import BestSellingSection from "./BestSellingSection";
+import FeaturesSection from "./FeaturesSection";
 import FindChoice from "./FindChoice";
 import OurProductSection from "./OurProductSection";
 import ProductCategorySection from "./ProductCategorySection";
@@ -20,6 +21,9 @@ const LandingPage = () => {
       </section>
       <section className="bg-gray-500">
         <BestSellingSection />
+      </section>
+      <section>
+        <FeaturesSection />
       </section>
       <section className=" py-4">
         <FindChoice />
