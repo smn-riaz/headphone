@@ -4,6 +4,7 @@ import BestSellingSection from "./BestSellingSection";
 import FeaturesSection from "./FeaturesSection";
 import FindChoice from "./FindChoice";
 import OurProductSection from "./OurProductSection";
+import PlaySongSection from "./PlaySongSection";
 import ProductCategorySection from "./ProductCategorySection";
 import TopBanner from "./TopBanner";
 
@@ -23,6 +24,7 @@ const LandingPage = () => {
       </section>
       <section>
         <FeaturesSection />
+        <PlaySongSection />
       </section>
       <section className=" py-4">
         <FindChoice />
