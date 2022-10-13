@@ -72,9 +72,9 @@ const ProductCategorySection = () => {
         <div className="p-12">
           <Slider {...settings}>
             {productCatgory.map((prd) => (
-              <div className="space-y-3 h-2/3 sm:p-12">
+              <div className="space-y-3 h-2/3 sm:p-12 group">
                 <div className="h-2/3">
-                  <img src={prd.image} alt="" />
+                  <img src={prd.image} alt="" className="group-hover:-translate-y-4 transition duration-500"/>
                 </div>
                 <div>
                   <h3 className="text-3xl font-semibold text-white">
