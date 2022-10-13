@@ -16,7 +16,7 @@ const LandingPage = () => {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 5000);
+    }, 4500);
   }, []);
   return (
     <main className="overflow-x-hidden">
