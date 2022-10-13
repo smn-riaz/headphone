@@ -174,7 +174,7 @@ const TopBanner = () => {
 
 
   return (
-    <main>
+    <main className="min-h-screen">
       <section className="md:flex flex-row items-center justify-center sm:px-20 px-6 mx-auto">
         <div className="basis-2/3 py-10 flex flex-row">
           <div className="basis-1/5 space-y-6 py-10 m-auto">
