@@ -18,7 +18,7 @@ const BestSellingSection = () => {
   return (
     <main className="px-10 py-28">
       <section className="sm:flex flex-row">
-        <div className="basis-1/4 space-y-4 my-8 sm:my-auto">
+        <div className="basis-1/4 space-y-4 my-8 sm:my-auto mx-6">
           <h1 className="text-3xl text-white">Best Selling </h1>
           <p className="text-gray-300 text-lg">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id fuga

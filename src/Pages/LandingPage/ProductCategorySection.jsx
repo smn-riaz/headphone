@@ -85,7 +85,7 @@ const ProductCategorySection = () => {
                 <div>
                   <p className="text-lg text-gray-400">
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Esse eligendi vitae possimus, tempore error laborum!
+                    Esse eligendi vitae .
                   </p>
                 </div>
                 <div>

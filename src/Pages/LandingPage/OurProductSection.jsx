@@ -1,4 +1,4 @@
-import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { faCartPlus, faCommentAlt, faHeart, faStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 
@@ -11,7 +11,7 @@ const OurProductSection = () => {
       star: 5,
     },
     {
-      image: 'https://i.ibb.co/dWYhsNK/prd2.png',
+      image: "https://i.ibb.co/dWYhsNK/prd2.png",
       price: 23,
       name: "Toaster",
       star: 5,
@@ -49,7 +49,7 @@ const OurProductSection = () => {
     {
       image: "https://i.ibb.co/XFtwBx9/prd9.png",
       price: 23,
-      name: "E-gadget",
+      name: "Air Cooler",
       star: 5,
     },
   ];
@@ -65,8 +65,10 @@ const OurProductSection = () => {
       <section className="mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 m-auto w-5/6 ">
           {gadgets.map((gadget) => (
-            <div className="basis-1/4 bg-[#2f3b4d] hover:bg-inherit duration-700 m-1 text-center py-4">
-              <div className="h-3/4 p-4"><img src={gadget.image} className="w-full" alt="" /></div>
+            <div className="basis-1/4 bg-[#2f3b4d] hover:bg-inherit duration-700 m-1 text-center py-4 relative group">
+              <div className="h-3/4 p-4">
+                <img src={gadget.image} className="p-5 w-10/12 h-10/12" alt="" />
+              </div>
               <div className="h-1/4 py-2 sm:space-y-2">
                 <h2 className="text-xl font-semibold text-white">
                   {gadget.name}
@@ -93,7 +95,28 @@ const OurProductSection = () => {
                     icon={faStar}
                   />
                 </h2>
-                <h3 className="text-lg font-bold text-gray-400">${gadget.price}</h3>
+              </div>
+              <div className="absolute inset-0 flex justify-center items-center group-hover:visible transition duration-500 opacity-0 hover:opacity-100 invisible">
+                <div className="bg-[#2f3b4d] p-2 rounded-xl space-x-3">
+                  <button>
+                    <FontAwesomeIcon
+                      className="text-xl text-white hover:text-[#4f698a]"
+                      icon={faHeart}
+                    />
+                  </button>
+                  <button>
+                    <FontAwesomeIcon
+                      className="text-xl text-white hover:text-[#1F334E]"
+                      icon={faCartPlus}
+                    />
+                  </button>
+                  <button>
+                    <FontAwesomeIcon
+                      className="text-xl text-white hover:text-[#1F334E]"
+                      icon={faCommentAlt}
+                    />
+                  </button>
+                </div>
               </div>
             </div>
           ))}

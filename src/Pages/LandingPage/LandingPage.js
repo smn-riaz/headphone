@@ -2,15 +2,17 @@ import React from "react";
 import AboutUs from "./AboutUs";
 import BestSellingSection from "./BestSellingSection";
 import FeaturesSection from "./FeaturesSection";
-import FindChoice from "./FindChoice";
+import FooterSection from "./FooterSection";
 import OurProductSection from "./OurProductSection";
 import PlaySongSection from "./PlaySongSection";
 import ProductCategorySection from "./ProductCategorySection";
 import TopBanner from "./TopBanner";
+import ScrollToTop from "react-scroll-to-top";
+import TopGo from "../../Components/TopGo";
 
 const LandingPage = () => {
   return (
-    <main className="overflow-x-hidden-hidden">
+    <main className="overflow-x-hidden">
       <section className="bg-gradient-to-r from-slate-700 to-slate-500 py-4">
         <TopBanner />
       </section>
@@ -26,9 +28,10 @@ const LandingPage = () => {
         <FeaturesSection />
         <PlaySongSection />
       </section>
-      <section className=" py-4">
-        <FindChoice />
+      <section className="bg-gradient-to-r from-slate-700 to-slate-500 py-4">
+        <FooterSection />
       </section>
+      <ScrollToTop smooth component={<TopGo />} />
     </main>
   );
 };

@@ -175,46 +175,46 @@ const TopBanner = () => {
 
   return (
     <main>
-      <section className="sm:flex flex-row items-center justify-center min-h-screen sm:px-20 px-6 mx-auto">
+      <section className="md:flex flex-row items-center justify-center sm:px-20 px-6 mx-auto">
         <div className="basis-2/3 py-10 flex flex-row">
           <div className="basis-1/5 space-y-6 py-10 m-auto">
             
-                  <div className="bg-black rounded-full h-8 w-8">
+                  <div className="bg-black border-[0.5px] border-white rounded-full h-8 w-8">
                     <button title="Black"
                       onClick={() => colorHandler("Black")}
-                      className="text-slate-500 w-full h-full"
+                      className="text-white w-full h-full"
                     >
                       B
                     </button>
                   </div>
-                  <div className="bg-white rounded-full h-8 w-8">
+                  <div className="bg-white border-[0.5px] border-black rounded-full h-8 w-8">
                     <button title="White"
                       onClick={() => colorHandler("White")}
-                      className="text-slate-500 w-full h-full"
+                      className="text-black w-full h-full"
                     >
                       W
                     </button>
                   </div>
-                  <div className="bg-blue-700 rounded-full h-8 w-8">
+                  <div className="bg-[#051836] border-[0.5px] border-white rounded-full h-8 w-8">
                     <button title="Blue"
                       onClick={() => colorHandler("Blue")}
-                      className="text-slate-500 w-full h-full"
+                      className="text-white w-full h-full"
                     >
                       B
                     </button>
                   </div>
-                  <div className="bg-red-600 rounded-full h-8 w-8">
+                  <div className="bg-red-700 border-[0.5px] border-white rounded-full h-8 w-8">
                     <button title="Red"
                       onClick={() => colorHandler("Red")}
-                      className="text-slate-500 w-full h-full"
+                      className="text-white w-full h-full"
                     >
                       R
                     </button>
                   </div>
-                  <div className="bg-gray-700 rounded-full h-8 w-8">
+                  <div className="bg-gray-700 border-[0.5px] border-white rounded-full h-8 w-8">
                     <button title="Gray"
                       onClick={() => colorHandler("Gray")}
-                      className="text-slate-500 w-full h-full"
+                      className="text-white w-full h-full"
                     >
                       G
                     </button>
