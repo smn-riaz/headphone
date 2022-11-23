@@ -202,7 +202,7 @@ const TopBanner = () => {
   },[playSong])
 
   return (
-    <main className="flex flex-col justify-center items-center">
+    <main className=" flex-col flex-center">
       <div className="">
         {!playSong ? (
           <div className="flex justify-center items-center border-[1px] border-l-0 rounded-l-full rounded-r-full">
