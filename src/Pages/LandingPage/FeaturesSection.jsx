@@ -6,13 +6,13 @@ const FeaturesSection = () => {
       <section>
         <div className='sm:flex flex-row justify-center align-middle bg-[#1E465D]'>
             <div className='basis-1/2 p-4 sm:p-8 my-auto space-y-4'>
-                <h5 className='uppercase text-gray-400 text-xl font-semibold'>
+                <h5 className='uppercase text-gray-400 text-xl font-semibold 2xl:text-5xl'>
                     Advance freatures
                 </h5>
-                <h2 className='uppercase text-4xl font-bold text-white'>
+                <h2 className='uppercase text-4xl font-bold text-white 2xl:text-7xl'>
                     New Sound  Aesthetics
                 </h2>
-                <p className='text-md  py-2 text-white'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quam eligendi minima voluptatibus earum, dolores perspiciatis nam veniam labore quae?</p>
+                <p className='text-md text-lg py-2 text-white 2xl:text-3xl'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quam eligendi minima voluptatibus earum, dolores perspiciatis nam veniam labore quae?</p>
             </div>
             <div className='basis-1/2'>
               <img src="https://i.ibb.co/gm0zghf/f7.jpg" className='h-full w-full' alt="" />
@@ -24,13 +24,13 @@ const FeaturesSection = () => {
       <section>
         <div className='sm:flex flex-row-reverse justify-center align-middle bg-[#C3BABF]'>
             <div className='basis-1/2 p-4 sm:p-8 my-auto space-y-4'>
-                <h5 className='uppercase text-gray-600 text-xl font-semibold'>
+                <h5 className='uppercase text-gray-600 text-xl font-semibold 2xl:text-5xl'>
                     Battery
                 </h5>
-                <h2 className='uppercase text-4xl font-bold text-gray-800'>
+                <h2 className='uppercase text-4xl font-bold text-gray-800 2xl:text-7xl'>
                     Live Longer Play Louder
                 </h2>
-                <p className='text-md  py-2 text-gray-800'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quam eligendi minima voluptatibus earum, dolores perspiciatis nam veniam labore quae?</p>
+                <p className='text-md text-lg py-2 text-gray-800 2xl:text-3xl'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quam eligendi minima voluptatibus earum, dolores perspiciatis nam veniam labore quae?</p>
             </div>
 
             <div className='basis-1/2'>
@@ -42,13 +42,13 @@ const FeaturesSection = () => {
       <section>
         <div className='sm:flex flex-row justify-center align-middle bg-[#272626]'>
             <div className='basis-1/2 p-4 sm:p-8 my-auto space-y-4'>
-                <h5 className='uppercase text-gray-400 text-xl font-semibold'>
+                <h5 className='uppercase text-gray-400 text-xl font-semibold 2xl:text-5xl'>
                     Design & Materials
                 </h5>
-                <h2 className='uppercase text-4xl font-bold text-white'>
+                <h2 className='uppercase text-4xl font-bold text-white 2xl:text-7xl'>
                    Over-ear elegance
                 </h2>
-                <p className='text-md  py-2 text-white'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quam eligendi minima voluptatibus earum, dolores perspiciatis nam veniam labore quae?</p>
+                <p className='text-md text-lg py-2 text-white 2xl:text-3xl'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quam eligendi minima voluptatibus earum, dolores perspiciatis nam veniam labore quae?</p>
             </div>
             <div className='basis-1/2'>
               <img src="https://i.ibb.co/ry3d9Rm/f6.jpg" className='h-full w-full' alt="" />

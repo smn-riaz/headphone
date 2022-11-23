@@ -2,7 +2,7 @@ import React from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import MoreBtn from "../../Components/MoreBtn";
+import BuyNowBtn from "../../Components/BuyNowBtn";
 
 const ProductCategorySection = () => {
   const productCatgory = [
@@ -77,19 +77,19 @@ const ProductCategorySection = () => {
                   <img src={prd.image} alt="" className="group-hover:-translate-y-4 transition duration-500"/>
                 </div>
                 <div>
-                  <h3 className="text-3xl font-semibold text-white">
+                  <h3 className="text-3xl font-semibold text-white 2xl:text-5xl">
                     {prd.name}
                   </h3>
                 </div>
                 <hr />
                 <div>
-                  <p className="text-lg text-gray-400">
+                  <p className="text-lg text-gray-400 2xl:text-3xl">
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                     Esse eligendi vitae .
                   </p>
                 </div>
-                <div>
-                  <MoreBtn />
+                <div className="2xl:py-6">
+                  <BuyNowBtn />
                 </div>
               </div>
             ))}

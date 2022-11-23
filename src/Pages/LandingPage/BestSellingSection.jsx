@@ -18,9 +18,9 @@ const BestSellingSection = () => {
   return (
     <main className="px-10 py-28">
       <section className="sm:flex flex-row">
-        <div className="basis-1/4 space-y-4 my-8 sm:my-auto mx-6">
-          <h1 className="text-3xl text-white">Best Selling </h1>
-          <p className="text-gray-300 text-lg">
+        <div className="basis-1/4 space-y-4 2xl:space-y-12 my-8 sm:my-auto mx-6">
+          <h1 className="text-3xl text-white 2xl:text-7xl">Best Selling </h1>
+          <p className="text-gray-300 text-lg 2xl:text-3xl">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id fuga
             obcaecati voluptatibus iste reprehenderit aspernatur itaque ipsa
             voluptate nisi corrupti.
@@ -36,11 +36,11 @@ const BestSellingSection = () => {
                 alt={best.name}
               />
             </div>
-            <h2 className="text-center text-white text-lg font-semibold">
+            <h2 className="text-center text-white text-lg 2xl:text-3xl font-semibold">
               {best.name}
             </h2>
             <div className="text-center p-4">
-              <button className=" bg-gradient-to-r from-slate-700 via-gray-500 to-slate-600 px-5 rounded-3xl text-white py-2">
+              <button className=" bg-gradient-to-r from-slate-700 via-gray-500 to-slate-600 px-5 rounded-3xl text-white py-2 2xl:text-2xl 2xl:px-8 2xl:py-5 opacity-80 hover:opacity-100">
                 BUY NOW
               </button>
             </div>

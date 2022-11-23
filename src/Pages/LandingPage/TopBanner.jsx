@@ -1,5 +1,10 @@
-import React, { useState } from "react";
+import React, { useContext, useRef, useState } from "react";
 import BuyNowBtn from "../../Components/BuyNowBtn";
+import unstoppable from "../../Assets/unstoppable.mp3";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPause, faPlay } from "@fortawesome/free-solid-svg-icons";
+import { useEffect } from "react";
+import { PlaySongContext } from "../../App";
 
 const TopBanner = () => {
   const [color, setColor] = useState("White");
@@ -9,30 +14,32 @@ const TopBanner = () => {
     id: "blue1",
     color: "Blue",
   });
-  const [images, setImages] = useState([{
-    image: "https://i.ibb.co/vYjTGg5/blue1.png",
-    name: "Front Side",
-    id: "blue1",
-    color: "Blue",
-  },
-  {
-    image: "https://i.ibb.co/QmbJ6dK/blue2.png",
-    name: "Back Side",
-    id: "blue2",
-    color: "Blue",
-  },
-  {
-    image: "https://i.ibb.co/9ym6kGL/blue3.png",
-    name: "Foldable Position",
-    id: "blue3",
-    color: "Blue",
-  },
-  {
-    image: "https://i.ibb.co/HX2fKSV/blue4.png",
-    name: "Angle Position",
-    id: "blue4",
-    color: "Blue",
-  },])
+  const [images, setImages] = useState([
+    {
+      image: "https://i.ibb.co/vYjTGg5/blue1.png",
+      name: "Front Side",
+      id: "blue1",
+      color: "Blue",
+    },
+    {
+      image: "https://i.ibb.co/QmbJ6dK/blue2.png",
+      name: "Back Side",
+      id: "blue2",
+      color: "Blue",
+    },
+    {
+      image: "https://i.ibb.co/9ym6kGL/blue3.png",
+      name: "Foldable Position",
+      id: "blue3",
+      color: "Blue",
+    },
+    {
+      image: "https://i.ibb.co/HX2fKSV/blue4.png",
+      name: "Angle Position",
+      id: "blue4",
+      color: "Blue",
+    },
+  ]);
 
   const headphones = [
     {
@@ -159,91 +166,141 @@ const TopBanner = () => {
   ];
 
   const colorHandler = (value) => {
-    const filteredImage = headphones.filter((image) => image.color === value)[0];
-    const filteredImages = headphones.filter(img => img.color === value)
+    const filteredImage = headphones.filter(
+      (image) => image.color === value
+    )[0];
+    const filteredImages = headphones.filter((img) => img.color === value);
     setImage(filteredImage);
-    setImages(filteredImages)
-    setColor(value)
-    
+    setImages(filteredImages);
+    setColor(value);
   };
 
   const imageHandler = (value) => {
-    const filteredImages = headphones.filter(img => img.id === value)[0]
-    setImage(filteredImages)
-  }
+    const filteredImages = headphones.filter((img) => img.id === value)[0];
+    setImage(filteredImages);
+  };
 
+  const myAudio = useRef();
+  const [playSong, setPlaySong] = useContext(PlaySongContext)
+
+  const handlePlaySong = () => {
+    if (!playSong) {
+      myAudio.current.play();
+      setPlaySong(true);
+    } else{
+      myAudio.current.pause();
+      setPlaySong(false);
+    }
+  };
+
+  useEffect(()=> {
+    if(playSong){
+      myAudio.current.play()
+    } else {
+      myAudio.current.pause()
+    }
+  },[playSong])
 
   return (
-    <main className="my-6 d-flex justify-center items-center">
-      <section className="md:flex flex-row items-center justify-center sm:px-20 px-6 mx-auto">
+    <main className="flex flex-col justify-center items-center">
+      <div className="">
+        {!playSong ? (
+          <div className="flex justify-center items-center border-[1px] border-l-0 rounded-l-full rounded-r-full">
+            <button
+          onClick={() => handlePlaySong()}
+          className="h-[50px] w-[50px] 2xl:h-[80px] 2xl:w-[80px]  rounded-full border-[0.5px] border-[#ffffff98] hover:bg-[#38465af3] duration-300 bg-[#5E6E85]"
+        >
+          <audio id="beep" ref={myAudio} src={unstoppable} type="audio" />
+
+          <FontAwesomeIcon className="text-black text-lg" icon={faPlay} />
+        </button> <h6 className="p-2 font-medium 2xl:text-3xl 2xl:p-6">Play Song</h6></div>
+        ) : (
+          <div className="flex justify-center items-center border-[1px] border-l-0 rounded-l-full rounded-r-full">
+            <button
+          onClick={() => handlePlaySong()}
+          className="h-[50px] w-[50px] 2xl:h-[80px] 2xl:w-[80px]  rounded-full border-[0.5px] border-[#ffffff98] hover:bg-[#38465af3] duration-300 bg-[#5E6E85]"
+        >
+          <audio id="beep" ref={myAudio} src={unstoppable} type="audio" />
+
+          <FontAwesomeIcon className="text-black text-lg" icon={faPause} />
+        </button> <h6 className="p-2 font-medium 2xl:text-3xl 2xl:p-6">Unstoppable by <b>Sia</b></h6></div>
+        )}
+      </div>
+
+      <section className="md:flex flex-row items-center justify-center sm:px-15 px-6 mx-auto">
         <div className="basis-2/3 py-10 flex flex-row">
           <div className="basis-1/5 space-y-6 py-10 m-auto">
-            
-                  <div className="bg-black border-[0.5px] border-white rounded-full h-8 w-8">
-                    <button title="Black"
-                      onClick={() => colorHandler("Black")}
-                      className="text-white w-full h-full"
-                    >
-                      B
-                    </button>
-                  </div>
-                  <div className="bg-white border-[0.5px] border-black rounded-full h-8 w-8">
-                    <button title="White"
-                      onClick={() => colorHandler("White")}
-                      className="text-black w-full h-full"
-                    >
-                      W
-                    </button>
-                  </div>
-                  <div className="bg-[#051836] border-[0.5px] border-white rounded-full h-8 w-8">
-                    <button title="Blue"
-                      onClick={() => colorHandler("Blue")}
-                      className="text-white w-full h-full"
-                    >
-                      B
-                    </button>
-                  </div>
-                  <div className="bg-red-700 border-[0.5px] border-white rounded-full h-8 w-8">
-                    <button title="Red"
-                      onClick={() => colorHandler("Red")}
-                      className="text-white w-full h-full"
-                    >
-                      R
-                    </button>
-                  </div>
-                  <div className="bg-gray-700 border-[0.5px] border-white rounded-full h-8 w-8">
-                    <button title="Gray"
-                      onClick={() => colorHandler("Gray")}
-                      className="text-white w-full h-full"
-                    >
-                      G
-                    </button>
-                  </div>
-                
+            <div className="bg-black border-[0.5px] border-white rounded-full h-8 w-8 2xl:h-16 2xl:w-16 2xl:text-2xl font-medium">
+              <button
+                title="Black"
+                onClick={() => colorHandler("Black")}
+                className="text-white w-full h-full"
+              >
+                B
+              </button>
+            </div>
+            <div className="bg-white border-[0.5px] border-black rounded-full h-8 w-8 2xl:h-16 2xl:w-16 2xl:text-2xl font-medium">
+              <button
+                title="White"
+                onClick={() => colorHandler("White")}
+                className="text-black w-full h-full"
+              >
+                W
+              </button>
+            </div>
+            <div className="bg-[#051836] border-[0.5px] border-white rounded-full h-8 w-8 2xl:h-16 2xl:w-16 2xl:text-2xl font-medium">
+              <button
+                title="Blue"
+                onClick={() => colorHandler("Blue")}
+                className="text-white w-full h-full"
+              >
+                B
+              </button>
+            </div>
+            <div className="bg-[red] border-[0.5px] border-white rounded-full h-8 w-8 2xl:h-16 2xl:w-16 2xl:text-2xl font-medium">
+              <button
+                title="Red"
+                onClick={() => colorHandler("Red")}
+                className="text-white w-full h-full"
+              >
+                R
+              </button>
+            </div>
+            <div className="bg-gray-700 border-[0.5px] border-white rounded-full h-8 w-8 2xl:h-16 2xl:w-16 2xl:text-2xl font-medium">
+              <button
+                title="Gray"
+                onClick={() => colorHandler("Gray")}
+                className="text-white w-full h-full"
+              >
+                G
+              </button>
+            </div>
           </div>
           <div className="basis-4/5 my-auto">
             <div>
-              <img src={image.image} alt="" />
+              <img src={image.image} className="2xl:w-[70%]" alt="headphone" />
             </div>
             <div className="flex flex-row sm:w-1/2 space-x-4 mx-auto">
-                {
-                    images.map(image => <div className="basis-1/4 border-2 border-slate-500 hover:cursor-pointer">
-                    <img src={image.image} onMouseEnter={() => imageHandler(`${image.id}`)} alt="" />
-                </div>)
-                }
-                
+              {images.map((image) => (
+                <div className="basis-1/4 border-2 border-slate-500 hover:cursor-pointer">
+                  <img
+                    src={image.image}
+                    onMouseEnter={() => imageHandler(`${image.id}`)}
+                    alt=""
+                  />
+                </div>
+              ))}
             </div>
           </div>
         </div>
-        <div className="basis-1/3 space-y-6 py-10">
-          <h1 className="text-3xl font-bold text-gray-200">
-            Beats Studio3 Wireless Over-Ear Headphones -
-            {image.color}
+        <div className="basis-1/3 space-y-6 2xl:space-y-12 py-10">
+          <h1 className="text-3xl font-bold text-gray-200 2xl:text-5xl">
+            Beats Studio3 Wireless Over-Ear Headphones -{image.color}
           </h1>
-          <p className="text-white text-lg">
+          <p className="text-white text-lg 2xl:text-3xl">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos
             quisquam vel dolor perspiciatis similique. Maxime excepturi
-            doloremque aliquam sunt aliquid! 
+            doloremque aliquam sunt aliquid!
           </p>
           <BuyNowBtn />
         </div>

@@ -6,11 +6,11 @@ const AboutUs = () => {
   return (
     <main className="">
         <div className="md:flex justify-center items-center m-2 sm:m-12 space-y-8">  
-        <div className="basis-1/2 space-y-6 p-4 my-auto">
+        <div className="basis-1/2 space-y-6 2xl:space-y-16 p-4 my-auto">
           <div>
-            <h2 className="text-4xl text-slate-800 font-bold">About Us</h2>
+            <h2 className="text-4xl text-slate-800 font-bold 2xl:text-7xl uppercase">About Us</h2>
           </div>
-          <div className="space-y-4 text-white text-lg">
+          <div className="space-y-4 text-white text-lg 2xl:text-3xl 2xl:space-y-12">
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum
               excepturi accusantium voluptatibus quam atque, non id inventore
@@ -28,7 +28,7 @@ const AboutUs = () => {
         </div>
 
         <div className="basis-1/2 flex justify-center">
-          <img src={about} className="" alt="" />
+          <img src={about} className="2xl:w-[80%]" alt="" />
         </div>
 
         </div>
